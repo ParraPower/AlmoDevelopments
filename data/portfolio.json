@@ -1,0 +1,61 @@
+[
+  {
+
+    "Name": "Vanilla Blue Catering",
+    "Type": "Web",
+    "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
+    "Tech Stack": {
+      "Front End": "ReactJs, Bootstrap.CSS",
+      "Back End": ".Net MVC, Microsoft SQL Server",
+      "CI/CD": "Jenkins with Git Repo integration",
+      "Testing Frameworks": "NUnit For .Net, Chia for ReactJs",
+      "Source Control": "Git",
+      "Cloud Tech": null
+    },
+    "Company": null,
+    "Images": [
+      "VanillaBlue.png",
+      "VanillaBlue2.png",
+      "VanillaBlue3.png",
+      "VanillaBlue4.png"
+    ]
+  },
+
+  {
+
+    "Name": "Moneysoft Personal Finance Manager",
+    "Type": "Web",
+    "Description": "Web App licesned to Financial Advisors and used by their clients to manage their financial well-being.",
+    "Tech Stack": {
+      "Front End": "AngularJs, Angular.Material, BootStrap.CSS",
+      "Back End": ".Net Wep API, Microsoft SQL Server",
+      "CI/CD": "Jenkins with BitBucket integration",
+      "Testing Frameworks": "NUnit For .Net",
+      "Source Control": "BitBucket",
+      "Cloud Tech": null
+    },
+    "Company": "Moneysoft Pty Ltd",
+    "Images": []
+  },
+
+  {
+
+    "Name": "West Once Music",
+    "Type": "Web",
+    "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
+    "Tech Stack": {
+      "Front End": "ReactJs, BootStrap.CSS",
+      "Back End": ".Net MVC, .Net Web API, Microsoft SQL Server",
+      "CI/CD": "Manual deployments",
+      "Testing Frameworks": "Not applicable",
+      "Source Control": "Git",
+      "Cloud Tech": "AWS Cloud Search"
+    },
+    "Company": "HarvestThe.Net",
+    "Images": [
+      "WestOneMusic.png",
+      "WestOneMusic2.png",
+      "WestOneMusic3.png"
+    ]
+  }
+]

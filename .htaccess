@@ -1,0 +1,3 @@
+DirectoryIndex index.html
+RewriteEngine on
+Redirect /default.html http://almodevs.com/index.html

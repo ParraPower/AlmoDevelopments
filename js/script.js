@@ -1,4 +1,7 @@
-$(function(){
+import { type } from "os";
+
+
+$(function () {
 	"use strict";
 	
 	var sect = $( window.location.hash ),
@@ -11,7 +14,15 @@ $(function(){
 			$('body').addClass('border-dark');
 		}
 	}
-	
+
+	//$.ajax({
+	//	url: './data/portfolio.json',
+	//	type: 'GET',
+	//	success: function (data) {
+	//		console.log(data);
+	//	}
+	//});
+
 	/*=========================================================================
 		Magnific Popup (Project Popup initialization)
 	=========================================================================*/
