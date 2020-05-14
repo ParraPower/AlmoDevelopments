@@ -13,6 +13,7 @@
       "Cloud Tech": null
     },
     "Company": null,
+    "Thumbnail": "logo.svg",
     "Images": [
       "VanillaBlue.png",
       "VanillaBlue2.png",
@@ -35,6 +36,7 @@
       "Cloud Tech": null
     },
     "Company": "Moneysoft Pty Ltd",
+    "Thumbnail": "MoneysoftThumbnail.jpg",
     "Images": []
   },
 
@@ -52,6 +54,7 @@
       "Cloud Tech": "AWS Cloud Search"
     },
     "Company": "HarvestThe.Net",
+    "Thumbnail": "MoneysoftThumbnail.jpg",
     "Images": [
       "WestOneMusic.png",
       "WestOneMusic2.png",

@@ -1,11 +1,7 @@
-import { type } from "os";
-
-
 $(function () {
 	"use strict";
 	
-	var sect = $( window.location.hash ),
-		portfolio = $('.portfolio-items');
+	var sect = $(window.location.hash);
 	
 	if(sect.length == 1){
 		$('.section.active').removeClass('active');
@@ -15,13 +11,56 @@ $(function () {
 		}
 	}
 
-	//$.ajax({
-	//	url: './data/portfolio.json',
-	//	type: 'GET',
-	//	success: function (data) {
-	//		console.log(data);
-	//	}
-	//});
+
+	function generatePortfolio(data) {
+
+		var template =
+			`<li data-groups='{0}' >
+			<div class='inner' >
+				<img src='img/portfolio/{1}' alt>
+
+				<div class='overlay' >
+					<a href='#popup-1' class='view-project' >
+						View Project
+					</a>
+
+					<!--project popup-->
+					<div id='popup-1' class='popup-box zoom-anim-dialog mfp-hide' >
+						<figure>
+
+							<!--project popup image-->
+							<img src='img/portfolio/{2}' alt>
+												
+						</figure>
+						<div class='content' >
+
+							<!--project popup title-->
+							<h4>{3}</h4>
+
+							<!--project popup description-->
+							<p>{4}</p>
+
+						</div>
+												
+					</div>
+
+				</div>
+
+			</div>
+		</li>`;
+
+		var groupsText = '["' + data.Type.toString().toLowerCase() + '"]';
+		
+		var str =
+			template
+				.replace('{0}', groupsText)
+				.replace('{1}', data.Thumbnail)
+				.replace('{2}', data.Images[0])
+				.replace('{3}', data.Name)
+				.replace('{4}', data.Description);
+
+		return str;
+    }
 
 	/*=========================================================================
 		Magnific Popup (Project Popup initialization)
@@ -37,22 +76,37 @@ $(function () {
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
 	});
-	
+
+
 	$(window).on('load', function(){
 		$('body').addClass('loaded');
 		
 		/*=========================================================================
 			Portfolio Grid
 		=========================================================================*/
-		portfolio.shuffle();
-		$('.portfolio-filters > li > a').on('click', function (e) {
-			e.preventDefault();
-			var groupName = $(this).attr('data-group');
-			$('.portfolio-filters > li > a').removeClass('active');
-			$(this).addClass('active');
-			portfolio.shuffle('shuffle', groupName );
+		$.ajax({
+			url: './data/portfolio.json',
+			type: 'GET',
+			success: function (data) {
+				var portfolio = $('.portfolio-items');
+
+				for (var i in data) {
+					var d = data[i];
+					portfolio.append(
+						generatePortfolio(d)
+					);
+				}
+
+				portfolio.shuffle();
+				$('.portfolio-filters > li > a').on('click', function (e) {
+					e.preventDefault();
+					var groupName = $(this).attr('data-group');
+					$('.portfolio-filters > li > a').removeClass('active');
+					$(this).addClass('active');
+					portfolio.shuffle('shuffle', groupName);
+				});
+			}
 		});
-		
 	});
 	
 	/*=========================================================================
