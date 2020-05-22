@@ -941,9 +941,11 @@ body.section-switching.up .animation-block{
 .portfolio-items > li{
 	width:33.3333%;
 }
-.portfolio-items > li > .inner{
-	margin:5px;
-	position:relative;
+.portfolio-items > li > .inner {
+	margin: 5px;
+	position: relative;
+	background: white;
+	text-align: center;
 }
 .portfolio-items > li{
 	z-index:2;

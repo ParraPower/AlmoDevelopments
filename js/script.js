@@ -15,30 +15,30 @@ $(function () {
 	function generatePortfolio(data) {
 
 		var template =
-			`<li data-groups='{0}' >
+			`<li data-groups='{0}'>
 			<div class='inner' >
 				<img src='img/portfolio/{1}' alt>
 
-				<div class='overlay' >
-					<a href='#popup-1' class='view-project' >
+				<div class='overlay'>
+					<a href='#popup-{2}' class='view-project'>
 						View Project
 					</a>
 
 					<!--project popup-->
-					<div id='popup-1' class='popup-box zoom-anim-dialog mfp-hide' >
+					<div id='popup-{3}' class='popup-box zoom-anim-dialog mfp-hide'>
 						<figure>
 
 							<!--project popup image-->
-							<img src='img/portfolio/{2}' alt>
+							<img src='img/portfolio/{4}' alt>
 												
 						</figure>
 						<div class='content' >
 
 							<!--project popup title-->
-							<h4>{3}</h4>
+							<h4>{5}</h4>
 
 							<!--project popup description-->
-							<p>{4}</p>
+							<p>{6}</p>
 
 						</div>
 												
@@ -55,27 +55,14 @@ $(function () {
 			template
 				.replace('{0}', groupsText)
 				.replace('{1}', data.Thumbnail)
-				.replace('{2}', data.Images[0])
-				.replace('{3}', data.Name)
-				.replace('{4}', data.Description);
+				.replace('{2}', data.Id)
+				.replace('{3}', data.Id)
+				.replace('{4}', data.Images[0])
+				.replace('{5}', data.Name)
+				.replace('{6}', data.Description);
 
 		return str;
     }
-
-	/*=========================================================================
-		Magnific Popup (Project Popup initialization)
-	=========================================================================*/
-	$('.view-project').magnificPopup({
-		type: 'inline',
-		fixedContentPos: false,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
-	});
 
 
 	$(window).on('load', function(){
@@ -96,6 +83,21 @@ $(function () {
 						generatePortfolio(d)
 					);
 				}
+
+				/*=========================================================================
+					Magnific Popup (Project Popup initialization)
+				=========================================================================*/
+				$('.view-project').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
 
 				portfolio.shuffle();
 				$('.portfolio-filters > li > a').on('click', function (e) {

@@ -1,6 +1,6 @@
 [
   {
-
+    "Id": 1,
     "Name": "Vanilla Blue Catering",
     "Type": "Web",
     "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
@@ -13,7 +13,7 @@
       "Cloud Tech": null
     },
     "Company": null,
-    "Thumbnail": "logo.svg",
+    "Thumbnail": "logo.png",
     "Images": [
       "VanillaBlue.png",
       "VanillaBlue2.png",
@@ -23,7 +23,7 @@
   },
 
   {
-
+    "Id": 2,
     "Name": "Moneysoft Personal Finance Manager",
     "Type": "Web",
     "Description": "Web App licesned to Financial Advisors and used by their clients to manage their financial well-being.",
@@ -41,7 +41,7 @@
   },
 
   {
-
+    "Id": 3,
     "Name": "West Once Music",
     "Type": "Web",
     "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
@@ -54,11 +54,34 @@
       "Cloud Tech": "AWS Cloud Search"
     },
     "Company": "HarvestThe.Net",
-    "Thumbnail": "MoneysoftThumbnail.jpg",
+    "Thumbnail": "westOneLogo.png",
     "Images": [
       "WestOneMusic.png",
       "WestOneMusic2.png",
       "WestOneMusic3.png"
+    ]
+  },
+
+  {
+    "Id": 4,
+    "Name": "Vanilla Blue Catering EDM",
+    "Type": "Email",
+    "Description": "Email template integration. Built by 3rd party, integrated into Vanilla Blue Catering service via Almo Developments.",
+    "Tech Stack": {
+      "Front End": "Html, Bootstrap.CSS",
+      "Back End": ".Net MVC, Microsoft SQL Server",
+      "CI/CD": "",
+      "Testing Frameworks": "",
+      "Source Control": "Git",
+      "Cloud Tech": null
+    },
+    "Company": "Vanilla Blue Catering",
+    "Thumbnail": "logo.png",
+    "Images": [
+      "VanillaBlue.png",
+      "VanillaBlue2.png",
+      "VanillaBlue3.png",
+      "VanillaBlue4.png"
     ]
   }
 ]
