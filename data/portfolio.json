@@ -1,9 +1,9 @@
 [
   {
     "Id": 1,
-    "Name": "Vanilla Blue Catering",
+    "Name": "Vanilla Blue Catering - Website",
     "Type": "Web",
-    "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
+    "Description": "E-commerce website dedicated for catering at coporates offices and events",
     "Tech Stack": {
       "Front End": "ReactJs, Bootstrap.CSS",
       "Back End": ".Net MVC, Microsoft SQL Server",
@@ -15,10 +15,11 @@
     "Company": null,
     "Thumbnail": "logo.png",
     "Images": [
-      "VanillaBlue.png",
+      "VanillaBlue5.png",
       "VanillaBlue2.png",
       "VanillaBlue3.png",
-      "VanillaBlue4.png"
+      "VanillaBlue4.png",
+      "VanillaBlue.png"
     ]
   },
 
@@ -37,14 +38,14 @@
     },
     "Company": "Moneysoft Pty Ltd",
     "Thumbnail": "MoneysoftThumbnail.jpg",
-    "Images": []
+    "Images": ["Moneysoft1.png"]
   },
 
   {
     "Id": 3,
     "Name": "West Once Music",
     "Type": "Web",
-    "Description": "E-commerce website dedicated for coporate catering. Allowing payment processes with Credit card.",
+    "Description": "Muisc platform website deciated to allowing people in the netertainment industry to access audio content for their advertisments, television shows and other media",
     "Tech Stack": {
       "Front End": "ReactJs, BootStrap.CSS",
       "Back End": ".Net MVC, .Net Web API, Microsoft SQL Server",
@@ -78,10 +79,7 @@
     "Company": "Vanilla Blue Catering",
     "Thumbnail": "logo.png",
     "Images": [
-      "VanillaBlue.png",
-      "VanillaBlue2.png",
-      "VanillaBlue3.png",
-      "VanillaBlue4.png"
+      "EmailTemplate.png"
     ]
   }
 ]

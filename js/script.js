@@ -26,11 +26,13 @@ $(function () {
 
 					<!--project popup-->
 					<div id='popup-{3}' class='popup-box zoom-anim-dialog mfp-hide'>
-						<figure>
+						<figure class='popup-image-container'>
 
 							<!--project popup image-->
-							<img src='img/portfolio/{4}' alt>
-												
+							<img class='popup-image' src='img/portfolio/{4}' alt>
+							<div class='popup-expand-container' title='expand'>
+								<i class='fas fa-expand fa-2x'></i>
+							</div>				
 						</figure>
 						<div class='content' >
 
@@ -62,8 +64,51 @@ $(function () {
 				.replace('{6}', data.Description);
 
 		return str;
-    }
+	}
+	
+	function expandImage(thisElement) {
+		
+		var popupBox = $(thisElement).closest(".popup-box")
 
+		var documentWidth = $(document).width();
+
+		var potentialWidth = (popupBox.width() * 2);
+		
+		alert(potentialWidth + " " + typeof(potentialWidth));
+
+		if (potentialWidth < documentWidth) {
+
+			var originalImg = $(thisElement).siblings('.popup-image');
+
+			var cloneImg = originalImg.clone();
+			cloneImg.addClass("popup-image-clone");
+			
+			var cloneContainerHtml = 
+				`<div class='popup-image-clone-container'>
+				</div>`;
+
+			var left = (potentialWidth / 4);
+			
+			var cloneContainer = $(cloneContainerHtml).append(cloneImg);
+
+			originalImg.after(cloneContainer);
+
+			var cloneImg = $(originalImg).siblings(".popup-image-clone-container").children();
+
+			console.log(cloneImg);
+
+			$(cloneImg).animate({
+				left: "-=" + left.toString(),
+				width: potentialWidth.toString()
+			});
+		}
+	}
+
+	function removeExpandedImage(closeButton) {
+		$(closeButton)
+			.siblings(".popup-image-container")
+			.find(".popup-image-clone-container").remove();
+	}
 
 	$(window).on('load', function(){
 		$('body').addClass('loaded');
@@ -109,6 +154,14 @@ $(function () {
 				});
 			}
 		});
+	});
+
+	$(document).on('click', '.popup-expand-container', function() {
+		expandImage($(this));
+	});
+
+	$(document).on('click', '.mfp-close',  function() {
+		removeExpandedImage($(this));
 	});
 	
 	/*=========================================================================

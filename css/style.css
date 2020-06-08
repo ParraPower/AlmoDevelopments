@@ -1141,8 +1141,35 @@ body.section-switching.up .animation-block{
 	color:rgba(0,0,0,.45);
 	font-weight:500;
 }
-
-
+.popup-box > .popup-image-container  {
+	position: relative;
+	cursor: pointer;
+}
+.popup-box > .popup-image-container > .popup-expand-container {
+	position: absolute;
+	right: 2px;
+	bottom: 0;
+	padding: 15px;
+	background: white;
+	border-radius: 5px;
+	padding-bottom: 13px;
+}
+.popup-box > .popup-image-container > .popup-expand-container:hover {
+	background: #FAFAFA;
+}
+.popup-image-clone-container {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.popup-image-clone {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	max-width: none;
+	z-index: 1;
+} 
 /*=======================================================
 	Contact Section
 =======================================================*/
