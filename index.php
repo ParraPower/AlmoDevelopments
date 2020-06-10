@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php require_once('environment.php') ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -20,6 +21,7 @@
 		<link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
 		<link rel='stylesheet' type='text/css' href='css/style.css' >
 		
+		<script src="https://www.google.com/recaptcha/api.js?render=<?php $_ENV["SITE_KEY"] ?>"></script>
 	</head>
 	<body>
 		
@@ -1160,7 +1162,8 @@
 											</div>
 											
 											<div class='form-group text-center' >
-												<button type='submit' class='btn-custom btn-color' >
+												<button id='submitContact' type='button' class='btn-custom btn-color'
+													g-repcaptcha-siteid='<?php $_ENV["SITE_KEY"] ?>' >
 													Send Message
 												</button>
 											</div>
@@ -1181,14 +1184,14 @@
 											<i class='ion-ios-location-outline' ></i>
 											
 											<p>
-												1254 Patterson Street<br>
-												Houston, TX 77025
+												Sydney, NSW<br />
+												AUSTRALIA
 											</p>
 											
 										</div>
 										
 										
-										<div class='contact-info' >
+										<!-- <div class='contact-info' >
 											
 											<i class='ion-ios-telephone-outline' ></i>
 											
@@ -1197,7 +1200,7 @@
 												(+123) 913-295-2583
 											</p>
 											
-										</div>
+										</div> -->
 										
 										
 										<div class='contact-info' >
@@ -1205,8 +1208,8 @@
 											<i class='ion-android-globe' ></i>
 											
 											<p>
-												www.google.com<br>
-												www.example.com
+												<a target="_bank" href="https://www.linkedin.com/in/ahmed-alameddine-26113b12a/">Linked In</a><br>
+												<a target="_blabnk" href="https://www.upwork.com/o/profiles/users/~01b2d144e6e1846dd5/">Upwork</a>
 											</p>
 											
 										</div>
@@ -1246,5 +1249,6 @@
 		<script src='js/validator.min.js' ></script>
 		<script src='js/script.js' ></script>
 		<script src="https://kit.fontawesome.com/624c1bd017.js" crossorigin="anonymous"></script>
+
 	</body>
 </html>

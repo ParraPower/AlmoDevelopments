@@ -295,6 +295,20 @@ $(function () {
 		}
 	});
 	
-	
+	// grecaptcha.ready(function() {
+	// 	grecaptcha.execute()
+	// });
+
+	$(document).on('click', "#submitContact", onClick);
+
+	function onClick(e) {
+		e.preventDefault();
+
+		grecaptcha.ready(function() {
+          grecaptcha.execute($(this).attr("g-repcaptcha-siteid"), {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
 	
 });
